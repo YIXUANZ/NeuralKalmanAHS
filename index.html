@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./css/index.css" type="text/css" rel="stylesheet">
+  <title>OnlineAHS</title>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+</head>
+<body>
+<h1>Neural Network Augmented Kalman Filter for Robust Acoustic Howling Suppression</h1>
+<h2>Yixuan Zhang<sup>1</sup>, Hao Zhang<sup>2</sup>, Meng Yu<sup>2</sup>, Dong Yu<sup>2</sup></h2>
+<h3>1. The Ohio State University, Columbus, OH, USA</h3>
+<h3>2. Tencent AI Lab, Bellevue, WA, USA</h3>
+<p>This page provides sound demos for the titled paper. The titled paper can be accessed through <a href="https://arxiv.org/pdf/2301.12363.pdf">https://arxiv.org/</a >. </p>
+
+<figure class="centered-figure">
+    <img src="./audiofiles/ablation.png" alt="comparison" style="width: 28%; height: 21%;">
+    <br>
+    <figcaption>Fig. Spectrograms of (a) target near-end signal and outputs of (b) NeuralKalmanAHS, (c) NeuralKalmanAHS without 
+      <span class="mathjax-inline">\( \mathbf{\Psi}_{vv}(k) \)</span>, 
+      <span class="mathjax-inline">\( \mathbf{\Psi}_{\Delta\Delta}(k) \)</span>,
+      (d) NeuralKalmanAHS without 
+      <span class="mathjax-inline">\( \mathbf{R}(k) \)</span>, (e) Kalman filter. 
+    </figcaption>
+    <br>
+</figure>
+
+<p>Due to potential risks to the auditory system, we have omitted the 'no AHS' audio. Although we have included the outputs from the Kalman filter, listening to the entire audio is not recommended.</p>
+
+<table  cellpadding=“20”>
+  <tr>
+  <th colspan="2">Waveforms</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>G = 2</th>
+  
+  </tr>
+  <tr>
+    <th>Target signal</th>
+    <td><audio controls>
+        <source src="./audiofiles/ablation/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_ref.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>NeuralKalmanAHS</th>
+    <td><audio controls>
+        <source src="./audiofiles/ablation/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_fQR.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>NeuralKalmanAHS without 
+      <span class="mathjax-inline">\( \mathbf{\Psi}_{vv}(k) \)</span>, 
+      <span class="mathjax-inline">\( \mathbf{\Psi}_{\Delta\Delta}(k) \)</span></th>
+    <td><audio controls>
+        <source src="./audiofiles/ablation/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_f.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>NeuralKalmanAHS without 
+      <span class="mathjax-inline">\( \mathbf{R}(k) \)</span></th>
+    <td><audio controls>
+        <source src="./audiofiles/ablation/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_QR.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Kalman filter</th>
+    <td><audio controls>
+        <source src="./audiofiles/ablation/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_kalman.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+</table>
+<br>
+
+
+<figure class="centered-figure">
+    <hr><br><br>
+    <img src="./audiofiles/comparison.png" alt="comparison" style="width: 52%; height: 39%;">
+    <br>
+    <figcaption>Fig. Spectrograms of (a) target signal, (b) no AHS, (c)
+      Kalman filter, (d) DeepMFC, (e) HybridAHS, (f) Neural-KG, and (g) Proposed NeuralKalmanAHS.
+    </figcaption>
+    <br>
+</figure>
+
+<p>Due to potential risks to the auditory system, we have omitted the 'no AHS' audio. Although we have included the outputs from the Kalman filter, listening to the entire audio is not recommended.</p>
+
+<table  cellpadding=“20”>
+  <tr>
+  <th colspan="3">Waveforms</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Moderate Howling (G = 1.5)</th>
+    <th>Severe Howling (G = 3)</th> 
+  
+  </tr>
+  <tr>
+    <th>Target signal</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_ref.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_ref.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>no AHS</th>
+    <td><audio controls>
+        <source src="" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Kalman filter</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_kalman.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_kalman.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Deep MFC</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_deepmfc.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_deepMFC.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Hybrid AHS</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_hybridAHS.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_hybridAHS.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Proposed NN</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineNN_RM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_nnRM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th style="padding: 12px;">Proposed Hybrid (RM)</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybrid_RM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlinehybridRM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+  <tr>
+    <th>Proposed Hybrid</th>
+    <td><audio controls>
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybrid_cRM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+    <td><audio controls>
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybridcRM.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio></td>
+  </tr>
+
+</table>
+<br><br><br>
+</body>
+</html>

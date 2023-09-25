@@ -1,0 +1,66 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  
+  h1 {
+    color: Black;
+    text-align: center;
+  }
+  
+  h2 {
+    color: Black;
+    text-align: center;
+  }
+
+  h3 {
+    color: Black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    width: 1000px;
+    height: 750px;
+    }
+
+  p{
+    text-align: center;
+    align: center;
+  }
+  li {
+    font-size: 18px;
+  }
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    align: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  ul{
+    list-style-type: None;
+  }
+  audio {
+    width: 7.0cm;
+    height: 1.2cm;
+  }
+
+.centered-figure figcaption {
+  text-align: center;
+  font-weight: bold;
+}
+
+.centered-figure hr {
+  width: 100%; /* or whatever width you want */
+  border: 1.2px solid #ccc; /* or any other color */
+  margin: 10px auto; /* centers the <hr> and adds a margin on the top and bottom */
+}
