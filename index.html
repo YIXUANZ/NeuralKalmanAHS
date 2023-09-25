@@ -2,7 +2,7 @@
 <html>
 <head>
   <link href="./css/index.css" type="text/css" rel="stylesheet">
-  <title>OnlineAHS</title>
+  <title>NeuralKalmanAHS</title>
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
 </head>
@@ -11,8 +11,11 @@
 <h2>Yixuan Zhang<sup>1</sup>, Hao Zhang<sup>2</sup>, Meng Yu<sup>2</sup>, Dong Yu<sup>2</sup></h2>
 <h3>1. The Ohio State University, Columbus, OH, USA</h3>
 <h3>2. Tencent AI Lab, Bellevue, WA, USA</h3>
-<p>This page provides sound demos for the titled paper. The titled paper can be accessed through <a href="https://arxiv.org/pdf/2301.12363.pdf">https://arxiv.org/</a >. </p>
-
+<p class="abstract">
+  <strong>Abstract</strong>: Acoustic howling suppression (AHS) is a critical challenge in audio communication systems. In this study, we propose a novel approach that leverages the power of neural networks (NN) to enhance the performance of traditional Kalman filter algorithms for AHS. Specifically, our method involves the integration of NN modules into the Kalman filter, enabling refining reference signal, a key factor in effective adaptive filtering, and estimating covariance metrics for the filter which are crucial for adaptability in dynamic conditions, thereby obtaining improved AHS performance. As a result, the proposed method achieves improved AHS performance compared to both standalone NN and Kalman filter methods. Experimental evaluations validate the effectiveness of our approach.
+</p>
+<p>This page provides sound demos for the titled paper. The titled paper can be accessed through <a href="https://arxiv.org/pdf/2301.12363.pdf">[Link will be provided later.]</a >. </p>
+<hr><br>
 <figure class="centered-figure">
     <img src="./audiofiles/ablation.png" alt="comparison" style="width: 28%; height: 21%;">
     <br>
@@ -25,7 +28,7 @@
     <br>
 </figure>
 
-<p>Due to potential risks to the auditory system, we have omitted the 'no AHS' audio. Although we have included the outputs from the Kalman filter, listening to the entire audio is not recommended.</p>
+<p>Although the output from the Kalman filter has been included, listening to the entire audio is not recommended.</p>
 
 <table  cellpadding=“20”>
   <tr>
@@ -156,35 +159,24 @@ Your browser does not support the audio element.
 </audio></td>
   </tr>
   <tr>
-    <th>Proposed NN</th>
+    <th>Neural-KG</th>
     <td><audio controls>
-        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineNN_RM.wav" type="audio/wav">
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_Neural-KG.wav" type="audio/wav">
 Your browser does not support the audio element.
 </audio></td>
     <td><audio controls>
-        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_nnRM.wav" type="audio/wav">
-Your browser does not support the audio element.
-</audio></td>
-  </tr>
-  <tr>
-    <th style="padding: 12px;">Proposed Hybrid (RM)</th>
-    <td><audio controls>
-        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybrid_RM.wav" type="audio/wav">
-Your browser does not support the audio element.
-</audio></td>
-    <td><audio controls>
-        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlinehybridRM.wav" type="audio/wav">
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_Neural-KG.wav" type="audio/wav">
 Your browser does not support the audio element.
 </audio></td>
   </tr>
   <tr>
-    <th>Proposed Hybrid</th>
+    <th style="padding: 12px;">NeuralKalmanAHS</th>
     <td><audio controls>
-        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybrid_cRM.wav" type="audio/wav">
+        <source src="./audiofiles/mild_howling_lspgain1.5/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_neuralkalman_fQR.wav" type="audio/wav">
 Your browser does not support the audio element.
 </audio></td>
     <td><audio controls>
-        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_onlineHybridcRM.wav" type="audio/wav">
+        <source src="./audiofiles/severe_howling_lspgain3/spk1___38-2___ID0422W0501_D0422_B_male_North___0.01682925615237149___1.9075460181261634_neuralkalman_fQR.wav" type="audio/wav">
 Your browser does not support the audio element.
 </audio></td>
   </tr>

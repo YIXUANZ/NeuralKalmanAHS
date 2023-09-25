@@ -64,3 +64,12 @@
   border: 1.2px solid #ccc; /* or any other color */
   margin: 10px auto; /* centers the <hr> and adds a margin on the top and bottom */
 }
+
+.abstract {
+  width: 60%;          /* Define the width of the abstract */
+  margin: 0 auto;      /* Center the abstract horizontally */
+  text-align: center; /* Justify the text, optional */
+  padding: 10px;       /* Some padding around the text, optional */
+  /* border: 2px solid #fffefe; A border around the abstract, optional */
+  /* box-shadow: 0 4px 8px rgb(245, 241, 241); A subtle shadow for some depth, optional */
+}
